@@ -25,3 +25,26 @@ topMenuEl.style.backgroundColor = 'var(--top-menu-bg)';
 
 //Add the class flex around 
 topMenuEl.classList.add('flex-around');
+
+
+//! part 3//
+const menuLinks = [
+    { text: 'about', href: '/about' },
+    { text: 'catalog', href: '/catalog' },
+    { text: 'orders', href: '/orders' },
+    { text: 'account', href: '/account' },
+  ];
+
+  menuLinks.forEach(link => {
+    // Create an a element
+    const linkEl = document.createElement('a');
+
+  // Set the href attribute
+  linkEl.setAttribute('href', link.href);
+  
+  // Set the text content
+  linkEl.textContent = link.text;
+  
+  // Append the a element to topMenuEl
+  topMenuEl.appendChild(linkEl);
+});
