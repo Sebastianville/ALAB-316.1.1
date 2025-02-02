@@ -48,3 +48,22 @@ const menuLinks = [
   // Append the a element to topMenuEl
   topMenuEl.appendChild(linkEl);
 });
+
+//! part TWO 3.1//
+const subMenuEl = document.getElementById('sub-menu');
+
+//set the height 
+subMenuEl.style.height = '100%';
+
+//set the background color of subMenuEl to the value stored in the sub menu bg 
+subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)';
+
+//Add the class flex around 
+subMenuEl.classList.add('flex-around');
+
+//set the position property of subMenuEl to the value of absolute 
+subMenuEl.style.position = "absolute"; 
+
+//set the top property to the value of 0
+subMenuEl.style.top = "0px"; 
+
