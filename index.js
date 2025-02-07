@@ -135,3 +135,24 @@ function helperSubMenu (subLinks) {
     subMenuEl.appendChild(subLinkEl); 
   });
 }
+
+subMenuEl.addEventListener('click', function (e) {
+  e.preventDefault(); 
+  
+   // Exit if the clicked element is not an <a>
+  if (!e.target.matches('a')) {
+    return;
+  }
+  
+  // Verify click event
+  // console.log(`Submenu item clicked: ${e.target.textContent}`); 
+
+  // Hide submenu
+  subMenuEl.style.top = '0';
+
+  // Remove 'active' class from all top menu links
+  topMenuLinks.forEach(link => link.classList.remove('active'));
+
+  // Update mainEl content inside an <h1>
+  mainEl.innerHTML = `<h1>${e.target.textContent}</h1>`;
+});
